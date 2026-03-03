@@ -8,7 +8,7 @@ def collect_players():
 
     rows = []
 
-    for player_id in range(1, 101):
+    for player_id in range(301, 501):
 
         print(f"\n player {player_id}")
 
@@ -64,7 +64,7 @@ def collect_players():
             print("complete")
 
         
-            time.sleep(1.5)
+            time.sleep(2)
 
         except Exception as e:
             print(f" error {player_id}: {e}")
@@ -80,7 +80,7 @@ def collect_players():
     df = df[df["agent"].notna()]
     df = df.sort_values(by=["agent", "player_id"])
 
-    df.to_csv("valo_all_time.csv", index=False)
+    df.to_csv("valo_all_time.csv", mode='a',index=False,header=False)
 
     print("\n csv created: valo_all_time.csv")
     print(f"Total rows: {len(df)}")
