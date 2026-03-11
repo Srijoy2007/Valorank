@@ -18,19 +18,15 @@ This project collects comprehensive Valorant player statistics and uses them to 
 - Find best winning case stratergies in each map 
 - analyzes gameplays and predicts outcome
 
-### **Current Progress: collected 100 agent stats from [![vlr.gg](https://www.vlr.gg/)] using [![vlrdevapi](https://github.com/Vanshbordia/vlrdevapi?tab=readme-ov-file)]
+### **Current Progress: collected training set and test set from [!vlr.gg] using [![vlrdevapi](https://github.com/Vanshbordia/vlrdevapi?tab=readme-ov-file)]
+                        applied linear regression on the data to predict player rating (81% accuracy)
 
 The dataset contains the following features for each player:
 
  **CSV FILE**: [Google Sheets Link-https://docs.google.com/spreadsheets/d/1T0Y2eui4J85Jni2GwScZMxOJ7anHT6I69gyyIVYPvFk/edit?usp=shari]
 
+
+
 ## To-DO - 
-- fit this data into a linear regression model
-- optimize it with sgd and bgd
-- use one non linear model and compare the output 
-- increase dataset to 10000+ data points 
-- setup website 
-- setup a redis backend for fast and smooth functioning
-- setup a fast api to get user data and show output on the website 
-
-
+- Add multithreading to data collection code to extract faster 
+- figure out mathematical relation between the different factors affecting rating 
